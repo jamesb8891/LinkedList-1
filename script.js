@@ -40,7 +40,7 @@ function createBookmark(event) {
                                <input class="delete-button" type="button" aria-label="" value="Delete">
                              </div>
                            </article>`;
-                             displayBookmarkArea.appendChild(newBookmark);
+  displayBookmarkArea.appendChild(newBookmark);
   clearInput();
   updateCounts();
 }

@@ -10,14 +10,18 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-section {
+.input-section {
   display: inline-block;
-  width: 40em;
-  height: 55em;
+  width: 49vw;
+  height: 100vh;
+  background-color: #455A64;
 }
 
-.input-section {
-  background-color: #455A64;
+.display-bookmark-area {
+  display: inline-block;
+  width: 49vw;
+  height: 100vh;
+  background-color: #CFD8DC;
 }
 
 h1 {
