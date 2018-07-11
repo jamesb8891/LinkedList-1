@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*----------start default desktop layout----------*/
+section {
+  float: left;
+  height: 100vh;
+  width: 50%;
+}
+
+/*----------start input section styles----------*/
+.input-section {
+  background-color: #455A64;
+}
+
+h1 {
+  color: #FFF;
+  font-weight: 800;
+  font-size: 3.3rem;
+  text-align: center;
+  width: 87.5%;
+  margin-top: 11.85rem;
+  margin-bottom: 3.35rem;
+  margin-left: 7%;
+}
+
+.logo {
+  height: 3rem;
+  position: relative;
+  top: .16rem;
+}
+
+.user-form-input {
+  display: block;
+  font-size: 1.8rem;
+  height: 2.6rem;
+  margin: 0 auto;
+  margin-top: 3.1rem;
+  padding: .6rem;
+  width: 87.5%;
+}
+
+/*----------start enter button styles----------*/
+
+.enter-button {
+  background-color: #CFD8DC;
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 800;
+  height: 2.27rem;
+  margin-bottom: 11.9rem;
+  margin-top: 3.2rem;
+}
+
+.enter-button:hover {
+  background-color: #FFD773;
+}
+
+.enable-button {
+  background-color: #FFC107;
+}
+
+/*----------end enter button styles----------*/
+/*----------end input section styles----------*/
+/*----------start card section styles----------*/
+
+.card-section {
+  background-color: #CFD8DC;
+}
+
+article {
+  background-color: #FFF;
+  border: thin solid #607D8B;
+  margin-left: 3.4%;
+  width: 94%;
+  height: 5rem;
+}
+
+.delete-button {
+  float: right;
+}
+
+/*----------end card section styles----------*/
+/*----------end default desktop layout----------*/
+/*----------layout changes for mobile----------*/
+@media screen and (max-width: 57rem) {
+  section {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/*read button stuff*/
+
+.read-button, 
+.delete-button {
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+
+.read .read-button {
+  color: #F05A28;
+  font-weight: 800;
+}
+
+ul {
+  list-style-type: none;
+}
