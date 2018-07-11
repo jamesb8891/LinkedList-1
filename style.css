@@ -1,12 +1,14 @@
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: 'Open Sans', sans-serif;
-  box-sizing: border-box;
 }
 
 /*-----Default Desktop Layout-----*/
 section {
-  width: 50%;
   float: left;
+  width: 50%;
 }
 /*----start user input section styles----*/
 .input-section {
@@ -15,19 +17,23 @@ section {
 h1 {
   color: #FFF;
   font-weight: 800;
-  height: 7%;
+  font-size: 3.3rem;
   text-align: center;
   width: 87.5%;
-  margin: 21% 0% 6% 7%;
+  margin-top: 11.85rem;
+  margin-bottom: 3.35rem;
+  margin-left: 7%;
 }
 .logo {
-  height: 1em;
+  height: 3rem;
+  position: relative;
+  top: .16rem;
 }
 .user-form-input {
   display: block;
-  height: 6%;
+  height: 2.6rem;
   margin: 0 auto;
-  margin-top: 5%;
+  margin-top: 3.1rem;
   width: 87.5%;
 }
 
@@ -35,8 +41,9 @@ h1 {
 .enter-button {
   background-color: #CFD8DC;
   color: #FFF;
-  height: 4%;
-  margin-bottom: 21%;
+  height: 2.27rem;
+  margin-bottom: 11.9rem;
+  margin-top: 3.2rem;
 }
 .enter-button:hover {
   background-color: #FFD773;
