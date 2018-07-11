@@ -48,7 +48,7 @@ h1 {
 /*----------start enter button styles----------*/
 
 .enter-button {
-  background-color: #CFD8DC;
+  background-color: #FFC107;
   color: #FFF;
   font-size: 1rem;
   font-weight: 800;
@@ -59,6 +59,10 @@ h1 {
 
 .enter-button:hover {
   background-color: #FFD773;
+}
+
+.enter-button:disabled {
+  background-color: #CFD8DC;
 }
 
 .enable-button {
@@ -79,6 +83,11 @@ article {
   margin-left: 3.4%;
   width: 94%;
   height: 5rem;
+}
+
+p {
+  display: inline-block;
+  margin: 1.5em;
 }
 
 .delete-button {
@@ -106,8 +115,4 @@ article {
 .read .read-button {
   color: #F05A28;
   font-weight: 800;
-}
-
-ul {
-  list-style-type: none;
 }

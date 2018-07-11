@@ -1,34 +1,33 @@
-//*****This is where global variables live*****
 var enterButton = document.querySelector(".enter-button");
 var readButton = document.querySelector(".read-button");
 var userWebsiteInput = document.querySelector(".user-website-input");
 var userUrlInput = document.querySelector(".user-url-input");
 var displayBookmarkArea = document.querySelector(".display-bookmark-area");
 var userForm = document.querySelector(".user-form");
+var totalBookmarks = document.querySelector(".total-bookmarks");
+var readBookmarks = document.querySelector(".read-bookmarks");
+var unreadBookmarks = document.querySelector(".unread-bookmarks");
 
-
-//*****This is where event listeners live*****
 enterButton.addEventListener('click', createBookmark);
 displayBookmarkArea.addEventListener('click', removeBookmark);
 displayBookmarkArea.addEventListener('click', toggleRead);
 userWebsiteInput.addEventListener('keyup', disableInput);
 userUrlInput.addEventListener('keyup', disableInput);
 
-//*****This is where functions live*****
 function disableInput() {
   if (userWebsiteInput.value === '' || userUrlInput.value === '') {
     enterButton.disabled = true;
   } else {
     enterButton.disabled = false;
   }
-};
+}
 
 function createBookmark(event) {
   event.preventDefault();
-  if (is_url() === true) {
+  if (urlChecker() === true) {
   var newBookmark = document.createElement('article');
   newBookmark.innerHTML = `<div class='bookmark'>
-                            <h4>${userWebsiteInput.value}</h4>
+                            <h2>${userWebsiteInput.value}</h2>
                           </div>
                           <div>
                             <a target='_blank' href="${userUrlInput.value}">${userUrlInput.value}</a>
@@ -48,11 +47,6 @@ function createBookmark(event) {
 function clearInput() {
   userWebsiteInput.value = '';
   userUrlInput.value = '';
-  redisableEnterButton();
-}
-
-function redisableEnterButton() {
-  enterButton.disabled = true;
 }
 
 function toggleRead() {
@@ -73,20 +67,17 @@ function updateCounts() {
   var readCount = document.querySelectorAll('.read').length;
   var totalCount = document.querySelectorAll('.bookmark').length;
   var unreadCount = (totalCount - readCount);
-  console.log(totalCount + " total bookmarks");
-  console.log(readCount + " read bookmarks");
-  console.log (unreadCount + " unread bookmarks")
+  totalBookmarks.innerText = 'Total Bookmarks: ' + totalCount;
+  readBookmarks.innerText = 'Read Bookmarks: ' + readCount;
+  unreadBookmarks.innerText = 'Unread Bookmarks: ' + unreadCount;
 }
 
-function is_url()
-{
+function urlChecker() {
   regexp =  /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
-        if (regexp.test(userUrlInput.value))
-        {
+        if (regexp.test(userUrlInput.value)) {
           return true;
-        }
-        else
-        {
+        } else {
           return false;
         }
 }
+
