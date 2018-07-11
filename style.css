@@ -1,3 +1,54 @@
 body {
   font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+/*-----Default Desktop Layout-----*/
+section {
+  width: 50%;
+  float: left;
+}
+/*----start user input section styles----*/
+.input-section {
+  background-color: #455A64;
+}
+h1 {
+  color: #FFF;
+  font-weight: 800;
+  height: 7%;
+  text-align: center;
+  width: 87.5%;
+  margin: 21% 0% 6% 7%;
+}
+.logo {
+  height: 1em;
+}
+.user-form-input {
+  display: block;
+  height: 6%;
+  margin: 0 auto;
+  margin-top: 5%;
+  width: 87.5%;
+}
+
+/*--start enter button styles--*/
+.enter-button {
+  background-color: #CFD8DC;
+  color: #FFF;
+  height: 4%;
+  margin-bottom: 21%;
+}
+.enter-button:hover {
+  background-color: #FFD773;
+}
+.enable-button {
+  background-color: #FFC107;
+}
+/*--end enter button styles--*/
+
+
+
+/*----end user input section styles*/
+.card-section {
+  background-color: #CFD8DC;
 }
