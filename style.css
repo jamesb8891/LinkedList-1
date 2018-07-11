@@ -1,63 +1,98 @@
-/*reset problem areas*/
-
 * {
-  margin: 0;
-  padding: 0;
-  /*box-sizing: border-box;*/
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.input-section {
-  display: inline-block;
-  width: 49vw;
+/*----------start default desktop layout----------*/
+section {
+  float: left;
   height: 100vh;
+  width: 50%;
+}
+
+/*----------start input section styles----------*/
+.input-section {
   background-color: #455A64;
 }
 
-.display-bookmark-area {
-  display: inline-block;
-  width: 49vw;
-  height: 100vh;
-  background-color: #CFD8DC;
-}
-
 h1 {
-  padding-top: 2em;
-  color: #FFFFFF;
-  font-size: 4.5rem;
+  color: #FFF;
+  font-weight: 800;
+  font-size: 3.3rem;
   text-align: center;
-}
-
-.user-form {
-  display: block;
-  margin: auto;
-  width: 33.5rem;
-  height: 3.5rem;
-  font-size: 2.5rem;
-  margin-top: 3.5rem;
-  padding-left: .7rem;
-}
-
-.user-form::placeholder {
-  color: rgb(187 189 191);
+  width: 87.5%;
+  margin-top: 11.85rem;
+  margin-bottom: 3.35rem;
+  margin-left: 7%;
 }
 
 .logo {
-  height: 3.7rem;
+  height: 3rem;
+  position: relative;
+  top: .16rem;
 }
 
+.user-form-input {
+  display: block;
+  font-size: 1.8rem;
+  height: 2.6rem;
+  margin: 0 auto;
+  margin-top: 3.1rem;
+  padding: .6rem;
+  width: 87.5%;
+}
+
+/*----------start enter button styles----------*/
+
 .enter-button {
-  border: none;
-  background-color: #FFC107;
-  color: #FFFFFF;
-  padding: 0;
+  background-color: #CFD8DC;
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 800;
+  height: 2.27rem;
+  margin-bottom: 11.9rem;
+  margin-top: 3.2rem;
 }
 
 .enter-button:hover {
-  background-color: #FFD773
+  background-color: #FFD773;
+}
+
+.enable-button {
+  background-color: #FFC107;
+}
+
+/*----------end enter button styles----------*/
+/*----------end input section styles----------*/
+/*----------start card section styles----------*/
+
+.card-section {
+  background-color: #CFD8DC;
+}
+
+article {
+  background-color: #FFF;
+  border: thin solid #607D8B;
+  margin-left: 3.4%;
+  width: 94%;
+  height: 5rem;
+}
+
+.delete-button {
+  float: right;
+}
+
+/*----------end card section styles----------*/
+/*----------end default desktop layout----------*/
+/*----------layout changes for mobile----------*/
+@media screen and (max-width: 57rem) {
+  section {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 /*read button stuff*/

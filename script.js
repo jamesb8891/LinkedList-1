@@ -25,24 +25,24 @@ function disableInput() {
 
 function createBookmark(event) {
   event.preventDefault();
-  console.log("create bookmark");
-  var newBookmark = document.createElement('ul');
-  newBookmark.innerHTML = `<ul>
-                             <div class='bookmark'>
-                               <li>${userWebsiteInput.value}</li>
-                               <li>${userUrlInput.value}</li>
-                             </div>
-                             <div>
-                               <a target='_blank' href="${userUrlInput.value}">${userUrlInput.value}</a>
-                             </div>
-                             <div>
-                               <input class="read-button" type="button" aria-label="" value="Read">
-                               <input class="delete-button" type="button" aria-label="" value="Delete">
-                             </div>
-                           </article>`;
+  if (is_url() === true) {
+  var newBookmark = document.createElement('article');
+  newBookmark.innerHTML = `<div class='bookmark'>
+                            <h4>${userWebsiteInput.value}</h4>
+                          </div>
+                          <div>
+                            <a target='_blank' href="${userUrlInput.value}">${userUrlInput.value}</a>
+                          </div>
+                          <div>
+                            <input class="read-button" type="button" aria-label="" value="Read">
+                            <input class="delete-button" type="button" aria-label="" value="Delete">
+                          </div>`;
   displayBookmarkArea.appendChild(newBookmark);
   clearInput();
   updateCounts();
+  } else {
+    alert('Enter valid URL!!!');
+  }
 }
 
 function clearInput() {
@@ -76,4 +76,17 @@ function updateCounts() {
   console.log(totalCount + " total bookmarks");
   console.log(readCount + " read bookmarks");
   console.log (unreadCount + " unread bookmarks")
+}
+
+function is_url()
+{
+  regexp =  /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
+        if (regexp.test(userUrlInput.value))
+        {
+          return true;
+        }
+        else
+        {
+          return false;
+        }
 }
