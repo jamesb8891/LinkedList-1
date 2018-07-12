@@ -48,7 +48,7 @@ h1 {
 /*----------start enter button styles----------*/
 
 .enter-button {
-  background-color: #CFD8DC;
+  background-color: #FFC107;
   color: #FFF;
   font-size: 1rem;
   font-weight: 800;
@@ -61,8 +61,8 @@ h1 {
   background-color: #FFD773;
 }
 
-.enable-button {
-  background-color: #FFC107;
+.enter-button:disabled {
+  background-color: #CFD8DC;
 }
 
 /*----------end enter button styles----------*/
@@ -78,24 +78,20 @@ article {
   border: thin solid #607D8B;
   margin-left: 3.4%;
   width: 94%;
-  height: 5rem;
+}
+
+h2 {
+  font-weight: 800;
+}
+
+p {
+  display: inline-block;
+  margin: 1.5rem;
 }
 
 .delete-button {
   float: right;
 }
-
-/*----------end card section styles----------*/
-/*----------end default desktop layout----------*/
-/*----------layout changes for mobile----------*/
-@media screen and (max-width: 57rem) {
-  section {
-    height: 100%;
-    width: 100%;
-  }
-}
-
-/*read button stuff*/
 
 .read-button, 
 .delete-button {
@@ -108,6 +104,12 @@ article {
   font-weight: 800;
 }
 
-ul {
-  list-style-type: none;
+/*----------end card section styles----------*/
+/*----------end default desktop layout----------*/
+/*----------layout changes for mobile----------*/
+@media screen and (max-width: 57rem) {
+  section {
+    height: 100%;
+    width: 100%;
+  }
 }
