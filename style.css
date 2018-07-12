@@ -10,6 +10,7 @@ body {
 section {
   float: left;
   height: 100vh;
+  overflow: scroll;
   width: 50%;
 }
 
@@ -81,6 +82,11 @@ article {
   width: 94%;
 }
 
+div {
+  width: 90%;
+  margin-left: 5%;
+}
+
 .bookmark {
   height: 3.1rem;
   padding-top: .85rem;
@@ -89,11 +95,6 @@ article {
 .url {
   height: 3.85rem;
   padding-top: 1.3rem;
-}
-
-div {
-  width: 90%;
-  margin-left: 5%;
 }
 
 .underline {
@@ -121,7 +122,11 @@ a:hover {
 p {
   display: block;
   margin: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 800;
 }
+
+/*----------start card button styles----------*/
 
 .delete-button {
   float: right;
@@ -147,13 +152,70 @@ p {
   font-weight: 800;
   text-decoration-color: #FFC107;
 }
-
+/*----------end card button styles----------*/
 /*----------end card section styles----------*/
 /*----------end default desktop layout----------*/
-/*----------layout changes for mobile----------*/
+/*----------start layout changes for mobile----------*/
 @media screen and (max-width: 57rem) {
   section {
     height: 100%;
     width: 100%;
   }
+/*----------start changes to input section----------*/
+  h1 {
+    font-size: 1.35rem;
+    margin-bottom: 1.4rem;
+    margin-top: .9rem;
+  }
+
+  .logo {
+    height: 1.3rem;
+  }
+
+  .user-form-input {
+    font-size: 1.6rem;
+    height: 2.4rem;
+    margin-top: 1.09rem;
+    padding: .4rem;
+  }
+
+  .enter-button {
+    font-size: .9rem;
+    height: 2.1rem;
+    margin-bottom: 1.2rem;
+  }
+/*----------end changes to input section----------*/
+/*----------start changes to card section----------*/
+  article {
+    border: thin solid #607D8B;
+    margin-bottom: .8rem;
+  }
+
+  .bookmark {
+    height: 2.2rem;
+    padding-top: .5rem;
+  }
+
+  .url {
+    height: 2.8rem;
+    padding-top: .9rem;
+  }
+
+  .underline {
+    border-bottom: thin solid #CFD8DC;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+
+  .btn {
+    margin: .5rem 0 .45rem 0;
+  }
+/*----------end changes to card section----------*/
 }
+/*----------end layout changes for mobile----------*/
