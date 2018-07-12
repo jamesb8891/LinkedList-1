@@ -34,8 +34,8 @@ function createBookmark(event) {
                               <a target='_blank' href="${userUrlInput.value}">${userUrlInput.value}</a>
                             </div>
                             <div>
-                              <input class="read-button btn" type="button" aria-label="" value="Read">
-                              <input class="delete-button btn" type="button" aria-label="" value="Delete">
+                              <input class="read-button btn" type="button" aria-label="Mark as read." value="Read">
+                              <input class="delete-button btn" type="button" aria-label="Delete bookmark." value="Delete">
                             </div>`;
   displayBookmarkArea.appendChild(newBookmark);
   clearInput();

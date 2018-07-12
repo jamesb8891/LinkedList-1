@@ -5,18 +5,18 @@
   <link rel="stylesheet" type="text/css" href="reset.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <section class="input-section">
-    <h1>Linked <img class="logo" src="images/linked-list-logo.svg" alt="Linked List Logo"> List</h1>
+  <section class="input-section" aria-lable="This is the form section of the page.">
+    <h1 aria-label="Linked List, a web page to manage your bookmarks.">Linked <img class="logo" src="images/linked-list-logo.svg" alt="Linked List Logo"> List</h1>
     <form>
-      <input class="user-form-input user-website-input user-form" type="text" aria-label="" placeholder="Website Title">
-      <input class="user-form-input user-url-input user-form" type="text" aria-label="" placeholder="Website URL">
-      <input class="user-form-input user-form enter-button" type="button" aria-label="" value="Enter" disabled="true">
+      <input class="user-form-input user-website-input user-form" type="text" aria-label="Enter the title of the website here." placeholder="Website Title">
+      <input class="user-form-input user-url-input user-form" type="text" aria-label="Enter the url of the website here." placeholder="Website URL">
+      <input class="user-form-input user-form enter-button" type="button" aria-label="Submit website title and url in order to create a bookmark." value="Enter" disabled="true">
     </form>
   </section>
-  <section class="display-bookmark-area card-section">
+  <section class="display-bookmark-area card-section" aria-label="This is the bookmark section of the page.">
     <p class="total-bookmarks"></p>
     <p class="read-bookmarks"></p>
     <p class="unread-bookmarks"></p>
