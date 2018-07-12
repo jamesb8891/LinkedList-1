@@ -27,15 +27,15 @@ function createBookmark(event) {
   event.preventDefault();
   if (urlChecker() === true) {
   var newBookmark = document.createElement('article');
-  newBookmark.innerHTML = ` <div class='bookmark'>
+  newBookmark.innerHTML = ` <div class='bookmark underline'>
                               <h2>${userWebsiteInput.value}</h2>
                             </div>
-                            <div>
+                            <div class='url underline'>
                               <a target='_blank' href="${userUrlInput.value}">${userUrlInput.value}</a>
                             </div>
                             <div>
-                              <input class="read-button" type="button" aria-label="" value="Read">
-                              <input class="delete-button" type="button" aria-label="" value="Delete">
+                              <input class="read-button btn" type="button" aria-label="" value="Read">
+                              <input class="delete-button btn" type="button" aria-label="" value="Delete">
                             </div>`;
   displayBookmarkArea.appendChild(newBookmark);
   clearInput();
@@ -56,14 +56,15 @@ function redisableEnterButton() {
 }
 
 function toggleRead() {
-  if (event.target.className === 'read-button') {
+  console.log("toggle read!!!")
+  if (event.target.className === 'read-button btn') {
   event.target.parentNode.parentNode.classList.toggle('read');
   }
   updateCounts();
 }
 
 function removeBookmark() {
-  if (event.target.className === 'delete-button') {
+  if (event.target.className === 'delete-button btn') {
     event.target.parentNode.parentNode.remove();
   }
   updateCounts();

@@ -75,17 +75,51 @@ h1 {
 
 article {
   background-color: #FFF;
-  border: thin solid #607D8B;
+  border: .1rem solid #607D8B;
+  margin-bottom: 1.6rem;
   margin-left: 3.4%;
   width: 94%;
 }
 
+.bookmark {
+  height: 3.1rem;
+  padding-top: .85rem;
+}
+
+.url {
+  height: 3.85rem;
+  padding-top: 1.3rem;
+}
+
+div {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.underline {
+  border-bottom: .1rem solid #CFD8DC;
+}
+
 h2 {
+  color: #455A64;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+a {
+  font-size: 1.2rem;
+  color: #607D8B;
+  text-decoration-color: #F2F4F4;
+  padding-bottom: .1rem;
+}
+
+a:hover {
   font-weight: 800;
+  text-decoration-color: #FFC107;
 }
 
 p {
-  display: inline-block;
+  display: block;
   margin: 1.5rem;
 }
 
@@ -93,15 +127,25 @@ p {
   float: right;
 }
 
-.read-button, 
-.delete-button {
-  font-size: 1.3rem;
-  text-decoration: underline;
+.read .read-button{
+  color: red;
+  font-weight: 800;
+  text-decoration: none;
 }
 
-.read .read-button {
-  color: #F05A28;
+.btn {
+  color: #455A64;
+  font-size: 1rem;
+  text-decoration: underline;
+  text-decoration-color: #F2F4F4;
+  border: none;
+  padding: none;
+  margin: .35rem 0 .35rem 0;
+}
+
+.btn:hover {
   font-weight: 800;
+  text-decoration-color: #FFC107;
 }
 
 /*----------end card section styles----------*/
