@@ -9,6 +9,7 @@ var readBookmarks = document.querySelector(".read-bookmarks");
 var unreadBookmarks = document.querySelector(".unread-bookmarks");
 
 
+
 enterButton.addEventListener('click', createBookmark);
 displayBookmarkArea.addEventListener('click', removeBookmark);
 displayBookmarkArea.addEventListener('click', toggleRead);
@@ -21,7 +22,7 @@ function disableInput() {
   } else {
     enterButton.disabled = false;
   }
-};
+}
 
 function createBookmark(event) {
   event.preventDefault();
@@ -37,6 +38,7 @@ function createBookmark(event) {
                               <input class="read-button btn" type="button" aria-label="" value="Read">
                               <input class="delete-button btn" type="button" aria-label="" value="Delete">
                             </div>`;
+
   displayBookmarkArea.appendChild(newBookmark);
   clearInput();
   updateCounts();
@@ -48,11 +50,6 @@ function createBookmark(event) {
 function clearInput() {
   userWebsiteInput.value = '';
   userUrlInput.value = '';
-  redisableEnterButton();
-}
-
-function redisableEnterButton() {
-  enterButton.disabled = true;
 }
 
 function toggleRead() {
@@ -87,3 +84,4 @@ function urlChecker() {
           return false;
         }
 }
+
