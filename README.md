@@ -24,6 +24,6 @@ This project will help us learn how to build React apps and make an api call to 
 
 http://frontend.turing.io/projects/linked-list.html
 
-### Github Pages Link
+### Live Version
 
 https://jamesb8891.github.io/LinkedList-1/
