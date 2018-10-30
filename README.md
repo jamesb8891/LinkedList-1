@@ -26,4 +26,4 @@ http://frontend.turing.io/projects/linked-list.html
 
 ### Github Pages Link
 
-http://github.io/jamesb8891/LinkedList-1
+https://jamesb8891.github.io/LinkedList-1/
