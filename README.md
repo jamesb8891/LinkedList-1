@@ -6,6 +6,13 @@ We built an app that can add a url as a bookmark, giving you the option to delet
 
 ### Installation Instructions:
 
+  * Open your Terminal
+  * Type in:
+  * git clone https://github.com/jamesb8891/LinkedList-1.git
+  * cd LinkedList-1/
+  * open index.html
+  * must type full url in order for the link to work.
+  Ex. https://www.google.com
 
 ### Project Background:
 
