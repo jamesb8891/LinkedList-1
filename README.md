@@ -13,15 +13,14 @@ This project will help us learn how to build React apps and make an api call to 
 
 ### Project Goals:
 
-- Write a program from scratch
-- Design and implement our app in React using states and props
-- Implement ES6 classes
+- Write an app from scratch
+- Design and implement our app using JS5 and CSS.
 - Implement array iterator and mutator methods to work with the CIA data
 - Write modular, reusable code that follows SRP (Single Responibility Principle)
 
 ### Design and Layout
 
-##### Our Comp
+##### Our Comp Details
 
 http://frontend.turing.io/projects/linked-list.html
 
